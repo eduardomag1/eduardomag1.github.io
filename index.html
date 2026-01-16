@@ -59,17 +59,30 @@
     }
 
     html, body { height: 100%; }
+
+    /* Base body: solid color only (gradients are on a fixed layer below) */
     body{
       margin: 0;
       font-family: var(--font);
       font-size: var(--body);
       line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Fixed gradient layer: prevents tiling/repeat seams on long pages */
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
       background:
         radial-gradient(1200px 700px at 20% -10%, rgba(138,180,255,0.18), transparent 50%),
         radial-gradient(900px 600px at 100% 10%, rgba(126,231,135,0.12), transparent 55%),
         radial-gradient(800px 600px at 40% 120%, rgba(255,204,102,0.10), transparent 60%),
         var(--bg);
-      color: var(--text);
+      background-repeat: no-repeat;
     }
 
     a{
@@ -304,6 +317,7 @@
        ========================= */
     @media print{
       body{ background: #fff; color: #000; }
+      body::before{ display:none; }
       .card{ box-shadow: none; background: #fff; border: 1px solid #ddd; }
       .btnrow{ display: none; }
       a{ color: #000; text-decoration: underline; }
