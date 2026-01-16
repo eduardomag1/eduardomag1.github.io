@@ -345,6 +345,23 @@
         () => alert("Could not copy email (browser blocked clipboard).")
       );
     }
+
+    // Make ALL external/file links open in a new tab:
+    // - External URLs (http/https)
+    // - PDF links
+    // Keeps internal section jumps (#publications, etc.) in the same tab.
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href]').forEach(a => {
+        const href = a.getAttribute('href') || "";
+        const isHash = href.startsWith("#");
+        const isExternal = href.startsWith("http://") || href.startsWith("https://");
+        const isPdf = href.toLowerCase().endsWith(".pdf") || href.toLowerCase().includes(".pdf?");
+        if (!isHash && (isExternal || isPdf)) {
+          a.setAttribute("target", "_blank");
+          a.setAttribute("rel", "noopener");
+        }
+      });
+    });
   </script>
 </head>
 
@@ -418,8 +435,8 @@
             </div>
 
             <div class="links">
-              <a href="https://orcid.org/0009-0005-7502-9857" target="_blank" rel="noopener">ORCID</a>
-              <a href="https://arxiv.org/search/?searchtype=author&query=Magalh%C3%A3es%2C+E" target="_blank" rel="noopener">arXiv (author)</a>
+              <a href="https://orcid.org/0009-0005-7502-9857">ORCID</a>
+              <a href="https://arxiv.org/search/?searchtype=author&query=Magalh%C3%A3es%2C+E">arXiv (author)</a>
             </div>
 
           </div>
@@ -518,7 +535,7 @@
           <p class="meta">Mathematics Students’ Association (FCUP) • May 2025 – Jun 2025</p>
 
           <div class="links" style="margin-top:10px;">
-            <a href="MiniCurso%20Teoria%20de%20Modelos.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+            <a href="MiniCurso%20Teoria%20de%20Modelos.pdf">Slides (PDF)</a>
           </div>
           <p class="small" style="margin-top:8px;">(Nota: os slides estão em português.)</p>
         </div>
@@ -537,7 +554,7 @@
         <p class="title">Rewriting Systems on Arbitrary Monoids</p>
         <p class="meta">Eduardo Magalhães • 2026 • Preprint</p>
         <div class="links">
-          <a href="https://arxiv.org/abs/2601.10564" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://arxiv.org/abs/2601.10564">arXiv</a>
         </div>
       </div>
 
@@ -545,7 +562,7 @@
         <p class="title">On Definably Compact Semigroups in o-Minimal Structures</p>
         <p class="meta">Eduardo Magalhães • 2025 • Preprint</p>
         <div class="links">
-          <a href="https://arxiv.org/abs/2507.19162" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://arxiv.org/abs/2507.19162">arXiv</a>
         </div>
       </div>
 
@@ -617,8 +634,8 @@
       </p>
 
       <div class="links">
-        <a href="https://orcid.org/0009-0005-7502-9857" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://arxiv.org/search/?searchtype=author&query=Magalh%C3%A3es%2C+E" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://orcid.org/0009-0005-7502-9857">ORCID</a>
+        <a href="https://arxiv.org/search/?searchtype=author&query=Magalh%C3%A3es%2C+E">arXiv</a>
       </div>
     </section>
 
