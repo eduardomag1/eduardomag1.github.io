@@ -364,17 +364,15 @@
   </script>
 </head>
 
-
 <body>
   <div class="wrap">
 
     <!-- TOP BAR -->
     <div class="topbar">
-      <div class="brand"></div>
+      <div class="brand">
+      </div>
 
       <div class="btnrow">
-        <a class="btn" href="#education">Education</a>
-        <a class="btn" href="#positions">Positions</a>
         <a class="btn" href="#publications">Publications</a>
         <a class="btn" href="#talks">Talks</a>
         <a class="btn" href="#teaching">Teaching</a>
@@ -394,8 +392,7 @@
           <h1>Eduardo Magalhães</h1>
 
           <p class="subtitle">
-            Adjunct Assistant Professor, Department of Mathematics (FCUP), University of Porto<br />
-            Associate Member, Centro de Matemática da Universidade do Porto (CMUP)
+            Adjunct Assistant Professor, Department of Mathematics (FCUP), University of Porto
           </p>
 
           <p class="small">Porto, Portugal</p>
@@ -412,25 +409,39 @@
 
           <div class="sep"></div>
 
+          
+
           <div class="chips">
-            <span class="chip">Logic</span>
             <span class="chip">Model theory</span>
+            <span class="chip">Geometric Logic</span>
             <span class="chip">Category theory</span>
             <span class="chip">Topos theory</span>
-            <span class="chip">Semigroup theory</span>
           </div>
         </div>
 
         <div>
-          <div class="card" style="padding: 12px;">
-            <img
-              src="image.jpg"
-              alt="Eduardo Magalhães"
-              style="width:100%; height:auto; display:block; border-radius:14px; border:1px solid var(--border);"
-            />
-          </div>
 
-          <div class="card" style="padding: 16px; margin-top:18px;">
+
+
+        <div class="card" style="padding: 12px;">
+    <img
+      src="image.jpg"
+      style="width:100%; height:auto; display:block; border-radius:14px; border:1px solid var(--border);"
+    />
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+          
+          <div class="card" style="padding: 16px;">
             <div class="sectionTitle">
               <h2>Links</h2>
               <span class="hint">profiles & identifiers</span>
@@ -440,12 +451,56 @@
               <a href="https://orcid.org/0009-0005-7502-9857">ORCID</a>
               <a href="https://arxiv.org/search/?searchtype=author&query=Magalh%C3%A3es%2C+E">arXiv (author)</a>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION + POSITIONS -->
+    <!-- MAIN SECTIONS -->
+    <div class="grid2">
+
+      <!-- RESEARCH -->
+      <section class="card" id="research">
+        <div class="sectionTitle">
+          <h2>Research Interests</h2>
+        </div>
+
+
+I am particularly interested in logic, category theory, algebra and especially in the ways these areas interact with one another. I am motivated by understanding how similar mathematical phenomena can be approached using different formal frameworks, and in comparing the perspectives these frameworks provide.
+
+
+<ul class="list">
+  <li>
+    In logic, I am especially drawn geometric logic and to model theory, both in its classical form and in categorical approaches.
+  </li>
+  <li>
+    Within category theory, I am most interested in its connections with logic, in particular through topos-theoretic ideas.
+  </li>
+</ul>
+        
+      </section>
+
+      <!-- UPDATES -->
+      <section class="card" id="news">
+        <div class="sectionTitle">
+          <h2>Updates</h2>
+        </div>
+
+        <div class="entry">
+          <p class="title">New preprint on monoidal rewriting systems</p>
+          <p class="meta">Jan 2026 - “Rewriting Systems on Arbitrary Monoids” (arXiv:2601.10564)</p>
+        </div>
+
+        <div class="entry">
+          <p class="title">Preprint on definably compact semigroups in o-minimal structures</p>
+          <p class="meta">Jul 2025 - “On Definably Compact Semigroups in o-Minimal Structures” (arXiv:2507.19162)</p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- EDUCATION + TEACHING -->
     <div class="grid2">
 
       <section class="card" id="education">
@@ -454,13 +509,11 @@
         </div>
 
         <div class="entry">
-          <p class="title">MSc in Mathematics</p>
-          <p class="meta">Faculty of Sciences, University of Porto (FCUP) • Sep 2023 – Jun 2025</p>
+          <p class="title">MSc in Mathematics - Faculty of Sciences, University of Porto (FCUP)</p>
+          <p class="meta">Sep 2023 – Jun 2025</p>
           <p class="small">
-            Final grade: 18/20<br />
-            Thesis: <em>Definable Semigroups in O-minimal Structures</em><br />
-            Supervisors: Dr. Mário Edmundo (FCUL) and Dr. Jorge Almeida (FCUP).<br />
-            Additional activity: Director, Educational Department of the Mathematics Students’ Association.
+            Thesis: <em>Definable Semigroups in o-minimal Structures</em><br/>
+            Supervised by Dr. Mário Edmundo (FCUL) and Dr. Jorge Almeida (FCUP).
           </p>
 
           <div class="links" style="margin-top:10px;">
@@ -470,26 +523,44 @@
         </div>
 
         <div class="entry">
-          <p class="title">BSc in Mathematics</p>
-          <p class="meta">Faculty of Sciences, University of Porto (FCUP) • Sep 2020 – Jun 2023</p>
-          <p class="small">Final grade: 17/20</p>
+          <p class="title">BSc in Mathematics - Faculty of Sciences, University of Porto (FCUP)</p>
+          <p class="meta">Sep 2020 – Jun 2023</p>
         </div>
       </section>
 
-      <section class="card" id="positions">
+      <section class="card" id="teaching">
         <div class="sectionTitle">
-          <h2>Academic Positions & Affiliations</h2>
+          <h2>Teaching</h2>
         </div>
 
         <div class="entry">
-          <p class="title">Associate Member</p>
-          <p class="meta">Centro de Matemática da Universidade do Porto (CMUP) • May 2026 – present</p>
+          <p class="title">Adjunct Assistant Professor - FCUP, University of Porto</p>
+          <p class="meta">Sep 2025 – present</p>
+          <ul class="list">
+            <li>Linear Algebra</li>
+            <li>Abstract Algebra</li>
+            <li>Real Analysis II</li>
+          </ul>
         </div>
 
         <div class="entry">
-          <p class="title">Adjunct Assistant Professor</p>
-          <p class="meta">Faculty of Sciences, University of Porto (FCUP) • Sep 2025 – present</p>
-          <p class="small">Courses taught: Linear Algebra, Abstract Algebra and Real Analysis II.</p>
+          <p class="title">Organizer & lecturer - mini-course on Category theory</p>
+          <p class="meta">Mathematics Students’ Association (FCUP) • Mar 2026 – May 2026</p>
+          
+          <div class="links" style="margin-top:10px; display:flex; gap:10px;">
+            <a href="IntroCatTheory.pdf">Slides (PDF)</a>
+            <a href="Proposition.pdf">Proposition</a>
+          </div>
+        </div>
+        
+        <div class="entry">
+          <p class="title">Organizer & lecturer - mini-course on Mathematical Logic and Applications</p>
+          <p class="meta">Mathematics Students’ Association (FCUP) • May 2025 – Jun 2025</p>
+
+          <div class="links" style="margin-top:10px;">
+            <a href="MiniCurso%20Teoria%20de%20Modelos.pdf">Slides (PDF)</a>
+          </div>
+          <p class="small" style="margin-top:8px;">(Note: the slides are in Portuguese)</p>
         </div>
       </section>
 
@@ -501,108 +572,93 @@
         <h2>Publications & Preprints</h2>
         <span class="hint">full list</span>
       </div>
-
+      
       <div class="entry" style="display:flex; gap:12px; align-items:baseline;">
-        <a href="https://arxiv.org/abs/2601.10564"
-           style="border:1px solid var(--border); background:var(--surface);
-                  padding:5px 10px; border-radius:999px; font-size:12px;
-                  line-height:1; white-space:nowrap;">
-          arXiv
-        </a>
+  <a href="https://arxiv.org/abs/2601.10564"
+     style="border:1px solid var(--border); background:var(--surface);
+            padding:5px 10px; border-radius:999px; font-size:12px;
+            line-height:1; white-space:nowrap;">
+    arXiv
+  </a>
 
-        <div style="min-width:0;">
-          <p class="title" style="margin:0 0 6px;">Rewriting Systems on Arbitrary Monoids</p>
-          <p class="meta" style="margin:0;">Eduardo Magalhães • Jan 2026 • Preprint</p>
-        </div>
+        
+  <div style="min-width:0;">
+    <p class="title" style="margin:0 0 6px;">Rewriting Systems on Arbitrary Monoids</p>
+    <p class="meta" style="margin:0;">Eduardo Magalhães • 2026 • Preprint</p>
+  </div>
+</div>
+
+<div class="entry" style="display:flex; gap:12px; align-items:baseline;">
+  <a href="https://arxiv.org/abs/2507.19162"
+     style="border:1px solid var(--border); background:var(--surface);
+            padding:5px 10px; border-radius:999px; font-size:12px;
+            line-height:1; white-space:nowrap;">
+    arXiv
+  </a>
+
+        
+  <div style="min-width:0;">
+    <p class="title" style="margin:0 0 6px;">On Definably Compact Semigroups in o-Minimal Structures</p>
+    <p class="meta" style="margin:0;">Eduardo Magalhães • 2025 • Preprint</p>
+  </div>
+</div>
+    
+
+    </section>
+
+    <!-- TALKS -->
+    <section class="card" id="talks">
+      <div class="sectionTitle">
+        <h2>Talks</h2>
       </div>
 
-      <div class="entry" style="display:flex; gap:12px; align-items:baseline;">
-        <a href="https://arxiv.org/abs/2507.19162"
-           style="border:1px solid var(--border); background:var(--surface);
-                  padding:5px 10px; border-radius:999px; font-size:12px;
-                  line-height:1; white-space:nowrap;">
-          arXiv
-        </a>
+      <div class="entry">
+        <p class="title">“Definable semigroups in O-minimal Structures”</p>
+        <p class="meta">Mathematical Logic Seminar, CEMS.UL (Faculty of Sciences, University of Lisbon) • 13 May 2025</p>
+      </div>
 
-        <div style="min-width:0;">
-          <p class="title" style="margin:0 0 6px;">On Definably Compact Semigroups in o-Minimal Structures</p>
-          <p class="meta" style="margin:0;">Eduardo Magalhães • Jul 2025 • Preprint</p>
-        </div>
+      <div class="entry">
+        <p class="title">“Semigroups Definable in O-minimal Structures”</p>
+        <p class="meta">18th Young Research Meeting of the University of Porto (IJUP) • 9 May 2025</p>
       </div>
     </section>
 
-    <!-- TALKS + TEACHING -->
+    <!-- AWARDS + OTHER -->
     <div class="grid2">
 
-      <section class="card" id="talks">
+      <section class="card" id="awards">
         <div class="sectionTitle">
-          <h2>Talks & Presentations</h2>
+          <h2>Awards</h2>
         </div>
 
         <div class="entry">
-          <p class="title">Accepted Speaker, TACL 2026</p>
-          <p class="meta">Jul 2026</p>
-          <p class="small">“Rewriting Systems on Arbitrary Monoids”</p>
-        </div>
-
-        <div class="entry">
-          <p class="title">Speaker, Mathematical Logic Seminar</p>
-          <p class="meta">CEMS.UL — Centre of Mathematical Studies, Faculty of Sciences, University of Lisbon • May 2025</p>
-          <p class="small">“Definable Semigroups in O-minimal Structures”</p>
-        </div>
-
-        <div class="entry">
-          <p class="title">Presenter, 18th Young Research Meeting of the University of Porto (IJUP)</p>
-          <p class="meta">May 2025</p>
-          <p class="small">“Semigroups Definable in O-minimal Structures”</p>
+          <p class="title">Best Oral Communication</p>
+          <p class="meta">IJUP (University of Porto) • 2025</p>
+          <p class="small">
+            Awarded for the presentation “Semigroups Definable in O-minimal Structures”.
+          </p>
         </div>
       </section>
 
-      <section class="card" id="teaching">
+      <section class="card" id="other">
         <div class="sectionTitle">
-          <h2>Teaching & Outreach</h2>
+          <h2>Other experience</h2>
         </div>
 
-        <div class="entry">
-          <p class="title">Organizer & Lecturer, Mini-course on Category Theory</p>
-          <p class="meta">Mathematics Students’ Association, FCUP • Mar 2026 – Jun 2026</p>
-
-          <div class="links" style="margin-top:10px; display:flex; gap:10px;">
-            <a href="IntroCatTheory.pdf">Slides (PDF)</a>
-            <a href="Proposition.pdf">Proposition</a>
-          </div>
+         <div class="entry">
+          <p class="title">Student activities</p>
+          <p class="meta">Director, Educational Department - Mathematics Students’ Association (FCUP)</p>
         </div>
-
+        
         <div class="entry">
-          <p class="title">Organizer & Lecturer, Mini-course on Mathematical Logic and Applications</p>
-          <p class="meta">Mathematics Students’ Association, FCUP • May 2025 – Jun 2025</p>
-
-          <div class="links" style="margin-top:10px;">
-            <a href="MiniCurso%20Teoria%20de%20Modelos.pdf">Slides (PDF)</a>
-          </div>
-          <p class="small" style="margin-top:8px;">Note: the slides are in Portuguese.</p>
+          <p class="title">Student internship - Contributions to Research in Science Teaching and Dissemination</p>
+          <p class="meta">FCUP • Feb 2022 – Jun 2023</p>
         </div>
       </section>
 
     </div>
-
-    <!-- AWARDS -->
-    <section class="card" id="awards">
-      <div class="sectionTitle">
-        <h2>Awards</h2>
-      </div>
-
-      <div class="entry">
-        <p class="title">Best Oral Communication Award</p>
-        <p class="meta">18th Young Research Meeting of the University of Porto (IJUP)</p>
-        <p class="small">
-          Awarded for the presentation “Semigroups Definable in O-minimal Structures”.
-        </p>
-      </div>
-    </section>
-
     <footer>
-      Last updated: May 2026<br />
+      Last updated: March 2026<br/>
       © 2026 Eduardo Magalhães • Built with GitHub Pages
     </footer>
 
