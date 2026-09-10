@@ -716,8 +716,7 @@
       letter-spacing: 0.04em;
     }
 
-    .publication-date.is-published time,
-    .publication-date.is-published span {
+    .publication-date.is-published time {
       color: var(--published);
     }
 
@@ -738,25 +737,13 @@
     }
 
     .publication-copy > .publication-reference {
-      display: flex;
       max-width: 760px;
-      flex-wrap: wrap;
-      gap: 4px 10px;
-      padding-top: 15px;
-      border-top: 1px solid var(--line);
-      color: var(--ink);
+      color: var(--ink-soft);
       font-size: 0.82rem;
     }
 
-    .publication-reference-label {
-      color: var(--published);
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
     .publication-reference cite {
+      color: var(--ink);
       font-family: var(--serif);
       font-size: 0.96rem;
     }
@@ -1715,7 +1702,7 @@
             </div>
             <div class="publication-date is-published">
               <time datetime="2026-09">September 2026</time>
-              <span>Published online</span>
+              <span>Published</span>
             </div>
           </div>
           <div class="publication-copy">
@@ -1726,16 +1713,14 @@
               from model theory.
             </p>
             <p class="publication-reference">
-              <span class="publication-reference-label">Published in</span>
-              <span>
-                <cite>Annals of Pure and Applied Logic</cite>
-                178 (2027), no. 2, Article 103838.
-              </span>
+              <cite>Annals of Pure and Applied Logic</cite>
+              178 (2027), no. 2, Article 103838.
             </p>
             <div class="tag-list" aria-label="Topics">
-              <span>Model theory</span>
-              <span>o-Minimality</span>
-              <span>Semigroups</span>
+              <span>definable semigroups</span>
+              <span>o-minimal structures</span>
+              <span>definably compact semigroups</span>
+              <span>completely simple semigroups</span>
             </div>
           </div>
           <div class="publication-links" aria-label="Paper links">
@@ -1758,7 +1743,7 @@
             >
               <span>Published paper</span>
               <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
-                <path d="M7 5h8v8M15 5l-9 9" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"></path>
               </svg>
             </a>
           </div>
