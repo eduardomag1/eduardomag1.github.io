@@ -56,6 +56,8 @@
       --green: #173e33;
       --green-light: #2f6957;
       --acid: #d6ef69;
+      --published: #315f78;
+      --published-wash: rgba(49, 95, 120, 0.09);
       --white: #fffdf7;
 
       --serif: "Iowan Old Style", Baskerville, "Times New Roman", serif;
@@ -78,6 +80,8 @@
       --ink-soft: #b4bcb7;
       --line: rgba(244, 240, 232, 0.16);
       --green-light: #96c6b5;
+      --published: #8ec4dc;
+      --published-wash: rgba(142, 196, 220, 0.08);
     }
 
     /* ================================================================
@@ -674,22 +678,47 @@
 
     .publication {
       display: grid;
-      padding: clamp(34px, 5vw, 58px) 0;
+      position: relative;
+      padding:
+        clamp(34px, 5vw, 58px)
+        clamp(14px, 2vw, 24px);
+      border-inline-start: 3px solid transparent;
       border-bottom: 1px solid var(--line);
       grid-template-columns: 0.26fr minmax(0, 1fr) auto;
       align-items: start;
       gap: clamp(24px, 5vw, 70px);
     }
 
+    .publication.is-published {
+      border-inline-start-color: var(--published);
+      background:
+        linear-gradient(
+          90deg,
+          var(--published-wash),
+          transparent 72%
+        );
+    }
+
     .publication-meta {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 16px;
     }
 
-    .publication-meta span:last-child {
+    .publication-date {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .publication-date span {
       color: var(--ink-soft);
       letter-spacing: 0.04em;
+    }
+
+    .publication-date.is-published time,
+    .publication-date.is-published span {
+      color: var(--published);
     }
 
     .publication-copy h3 {
@@ -708,6 +737,30 @@
       font-size: 0.92rem;
     }
 
+    .publication-copy > .publication-reference {
+      display: flex;
+      max-width: 760px;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.82rem;
+    }
+
+    .publication-reference-label {
+      color: var(--published);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .publication-reference cite {
+      font-family: var(--serif);
+      font-size: 0.96rem;
+    }
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -723,6 +776,13 @@
       font-weight: 690;
     }
 
+    .publication-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
     .publication-link {
       display: inline-flex;
       align-items: center;
@@ -731,6 +791,10 @@
       color: var(--green);
       font-size: 0.74rem;
       font-weight: 780;
+    }
+
+    .publication-link-published {
+      color: var(--published);
     }
 
     .publication-link .icon {
@@ -1117,6 +1181,10 @@
       color: var(--acid);
     }
 
+    html[data-theme="dark"] .publication-link-published {
+      color: var(--published);
+    }
+
     html[data-theme="dark"] .talk-card {
       background: rgba(255, 255, 255, 0.035);
     }
@@ -1258,7 +1326,14 @@
 
       .publication-meta {
         flex-direction: row;
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+      }
+
+      .publication-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px 22px;
       }
 
       .teaching-item {
@@ -1598,8 +1673,10 @@
         <!-- CONTENT: Publication 1 -->
         <article class="publication">
           <div class="publication-meta">
-            <span>2026</span>
-            <span>Preprint</span>
+            <div class="publication-date">
+              <time datetime="2026-01">January 2026</time>
+              <span>Preprint</span>
+            </div>
           </div>
           <div class="publication-copy">
             <h3>Rewriting Systems on Arbitrary Monoids</h3>
@@ -1614,24 +1691,32 @@
               <span>Category theory</span>
             </div>
           </div>
-          <a
-            class="publication-link"
-            href="https://arxiv.org/abs/2601.10564"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>Read on arXiv</span>
-            <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
-              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"></path>
-            </svg>
-          </a>
+          <div class="publication-links">
+            <a
+              class="publication-link"
+              href="https://arxiv.org/abs/2601.10564"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Read on arXiv</span>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+              </svg>
+            </a>
+          </div>
         </article>
 
         <!-- CONTENT: Publication 2 -->
-        <article class="publication">
+        <article class="publication is-published">
           <div class="publication-meta">
-            <span>2025</span>
-            <span>Preprint</span>
+            <div class="publication-date">
+              <time datetime="2025-07">July 2025</time>
+              <span>Preprint</span>
+            </div>
+            <div class="publication-date is-published">
+              <time datetime="2026-09">September 2026</time>
+              <span>Published online</span>
+            </div>
           </div>
           <div class="publication-copy">
             <h3>On Definably Compact Semigroups in o-Minimal Structures</h3>
@@ -1640,23 +1725,43 @@
               o-minimal structures, connecting definable algebra with tools
               from model theory.
             </p>
+            <p class="publication-reference">
+              <span class="publication-reference-label">Published in</span>
+              <span>
+                <cite>Annals of Pure and Applied Logic</cite>
+                178 (2027), no. 2, Article 103838.
+              </span>
+            </p>
             <div class="tag-list" aria-label="Topics">
               <span>Model theory</span>
               <span>o-Minimality</span>
               <span>Semigroups</span>
             </div>
           </div>
-          <a
-            class="publication-link"
-            href="https://arxiv.org/abs/2507.19162"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>Read on arXiv</span>
-            <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
-              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"></path>
-            </svg>
-          </a>
+          <div class="publication-links" aria-label="Paper links">
+            <a
+              class="publication-link"
+              href="https://arxiv.org/abs/2507.19162"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Read on arXiv</span>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+              </svg>
+            </a>
+            <a
+              class="publication-link publication-link-published"
+              href="https://doi.org/10.1016/j.apal.2026.103838"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Published paper</span>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M7 5h8v8M15 5l-9 9" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+              </svg>
+            </a>
+          </div>
         </article>
       </div>
     </section>
